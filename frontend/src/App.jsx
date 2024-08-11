@@ -15,7 +15,7 @@ const App = () => {
 
   useEffect(() => {
     async function getStudents() {
-      const studentData = await axios.get(`http://localhost:5000/api`);
+      const studentData = await axios.get(`/api`);
       console.log(studentData);
 
       setStudents(studentData.data.data);
@@ -83,6 +83,7 @@ const App = () => {
             handleNextPage={handleNextPage}
             page={page}
           />
+
         </div>
       </div>
     </div>
