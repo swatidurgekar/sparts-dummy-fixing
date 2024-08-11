@@ -15,7 +15,9 @@ const App = () => {
 
   useEffect(() => {
     async function getStudents() {
-      const studentData = await axios.get(`/api`);
+      const studentData = await axios.get(
+        `https://sparts-project.vercel.app/api`
+      );
       console.log(studentData);
 
       setStudents(studentData.data.data);
@@ -83,7 +85,6 @@ const App = () => {
             handleNextPage={handleNextPage}
             page={page}
           />
-
         </div>
       </div>
     </div>
